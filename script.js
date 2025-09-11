@@ -1,6 +1,6 @@
 // Configuration
 const CITY_NAME = 'Labuan Bajo'; // Change to your city, e.g., 'Labuan Bajo', 'Nusa Penida', etc.
-const WHATSAPP_NUMBER = '6281234567890'; // Use international format without '+' e.g., 628xxxxxxx
+const WHATSAPP_NUMBER = '62895352383302'; // Use international format without '+' e.g., 628xxxxxxx
 
 // Helper to build WhatsApp link with a prefilled message
 function buildWhatsAppLink(source = 'website') {
@@ -107,4 +107,17 @@ window.addEventListener('DOMContentLoaded', () => {
   setupHeaderScroll();
   setupWhatsApp();
   setYear();
+  setupMapLoader();
 });
+
+// Map loader: hide overlay when iframe finishes loading, with a fallback timeout
+function setupMapLoader() {
+  const iframe = document.getElementById('mapFrame');
+  const loader = document.getElementById('mapLoader');
+  if (!iframe || !loader) return;
+  const hide = () => loader.classList.add('hidden');
+  // Hide when iframe load event fires
+  iframe.addEventListener('load', hide);
+  // Fallback: hide after 8s to avoid permanent overlay
+  setTimeout(hide, 8000);
+}

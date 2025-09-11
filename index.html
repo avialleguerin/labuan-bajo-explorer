@@ -45,7 +45,12 @@
   <!-- Sticky Navigation -->
   <header class="site-header sticky top-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
     <div class="container nav-wrapper">
-      <a href="#home" class="logo text-tropical-700 font-bold tracking-wide">Island Boat Tours</a>
+      <a href="#home" class="logo" aria-label="Island Boat Tours">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9S3 16.97 3 12zm9-6.2c-1.54 0-2.8 1.26-2.8 2.8 0 1.54 1.26 2.8 2.8 2.8s2.8-1.26 2.8-2.8c0-1.54-1.26-2.8-2.8-2.8zM7.2 17.6a7.95 7.95 0 009.6 0 .75.75 0 10-.9-1.2 6.5 6.5 0 01-7.8 0 .75.75 0 10-.9 1.2z"/>
+        </svg>
+        Island Boat Tours
+      </a>
       <nav class="main-nav hidden md:flex gap-6 text-slate-700" id="mainNav">
         <a class="hover:text-tropical-700 transition" href="#tours">Tours</a>
         <a class="hover:text-tropical-700 transition" href="#about">About</a>
@@ -72,7 +77,7 @@
   <!-- Tours Section -->
   <section id="tours" class="section bg-white py-12">
     <div class="container">
-      <h2 class="section-title reveal text-tropical-800 text-4xl font-bold mb-8">Our Tours</h2>
+  <h2 class="section-title reveal">Our Tours</h2>
       <div class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- One Day Trip -->
         <article class="card reveal bg-white rounded-xl border border-gray-100 shadow-sm">
@@ -147,27 +152,45 @@
       <div class="gallery-grid">
         <figure class="gallery-item reveal">
           <img src="manta_point.png" alt="Manta Point" />
-          <figcaption class="caption">Manta Point</figcaption>
+          <figcaption class="caption">
+            <svg class="loc-white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+            Manta Point
+          </figcaption>
         </figure>
         <figure class="gallery-item reveal">
           <img src="komodo_national_park.png" alt="Komodo National Park" />
-          <figcaption class="caption">Komodo National Park</figcaption>
+          <figcaption class="caption">
+            <svg class="loc-white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+            Komodo National Park
+          </figcaption>
         </figure>
         <figure class="gallery-item reveal">
           <img src="turtle.png" alt="Sea Turtle" />
-          <figcaption class="caption">Sea Turtle</figcaption>
+          <figcaption class="caption">
+            <svg class="loc-white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+            Sea Turtle
+          </figcaption>
         </figure>
         <figure class="gallery-item reveal">
           <img src="komodo.png" alt="Komodo" />
-          <figcaption class="caption">Komodo Island</figcaption>
+          <figcaption class="caption">
+            <svg class="loc-white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+            Komodo Island
+          </figcaption>
         </figure>
         <figure class="gallery-item reveal">
           <img src="pink_beach.png" alt="Pink Beach" />
-          <figcaption class="caption">Pink Beach</figcaption>
+          <figcaption class="caption">
+            <svg class="loc-white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+            Pink Beach
+          </figcaption>
         </figure>
         <figure class="gallery-item reveal">
           <img src="raja_ampat.png" alt="Raja Ampat" />
-          <figcaption class="caption">Raja Ampat</figcaption>
+          <figcaption class="caption">
+            <svg class="loc-white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+            Raja Ampat
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -208,8 +231,13 @@
             <a class="btn outline" href="mailto:armansaputraundang@gmail.com" aria-label="Request a quote via email">Send a mail</a>
         </div>
       </div>
-      <div class="map-wrapper reveal">
-        <iframe title="GV4G+RP4, Labuan Bajo map" src="https://www.google.com/maps?q=GV4G%2BRP4%2C%20Labuan%20Bajo%2C%20Komodo%2C%20West%20Manggarai%20Regency%2C%20East%20Nusa%20Tenggara%2C%20Indonesia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-wrapper reveal" id="mapWrapper">
+        <!-- Loader shown while the iframe map is loading -->
+        <div class="map-loader" id="mapLoader" role="status" aria-live="polite">
+          <div class="spinner" aria-hidden="true"></div>
+          <span class="sr-only">Loading map…</span>
+        </div>
+        <iframe id="mapFrame" title="GV4G+RP4, Labuan Bajo map" src="https://www.google.com/maps?q=GV4G%2BRP4%2C%20Labuan%20Bajo%2C%20Komodo%2C%20West%20Manggarai%20Regency%2C%20East%20Nusa%20Tenggara%2C%20Indonesia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>

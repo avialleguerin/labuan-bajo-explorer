@@ -44,7 +44,7 @@
 <body class="bg-white text-slate-800">
   <!-- Sticky Navigation -->
   <header class="site-header sticky top-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
-    <div class="container nav-wrapper mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+    <div class="container nav-wrapper">
       <a href="#home" class="logo text-tropical-700 font-bold tracking-wide">Island Boat Tours</a>
       <nav class="main-nav hidden md:flex gap-6 text-slate-700" id="mainNav">
         <a class="hover:text-tropical-700 transition" href="#tours">Tours</a>
@@ -59,7 +59,7 @@
   <!-- Hero Section -->
   <section id="home" class="hero section relative">
     <div class="hero-bg" role="img" aria-label="Blue sea with a local boat"></div>
-    <div class="hero-content container relative mx-auto max-w-5xl px-4 py-16">
+  <div class="hero-content container relative">
       <h1 class="tagline reveal drop-shadow-md text-white">Discover the most beautiful islands around [City] with a local boat tour</h1>
       <p class="subtag reveal text-tropical-50/90">Friendly guide • Safe trips • Unforgettable views</p>
       <a class="btn primary reveal inline-flex items-center gap-2 bg-white/90 text-tropical-800 hover:bg-white px-5 py-3 rounded-xl shadow-md transition" id="heroWhatsApp" href="#contact">
@@ -71,55 +71,55 @@
 
   <!-- Tours Section -->
   <section id="tours" class="section bg-white py-12">
-    <div class="container mx-auto max-w-6xl px-4">
+    <div class="container">
       <h2 class="section-title reveal text-tropical-800 text-4xl font-bold mb-8">Our Tours</h2>
       <div class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Half-day (no image) -->
+        <!-- One Day Trip -->
         <article class="card reveal bg-white rounded-xl border border-gray-100 shadow-sm">
+          <div class="card-media">
+            <img src="boat.jpg" alt="Boat trip" />
+            <div class="price-badge">From $45</div>
+          </div>
           <div class="card-body p-5">
             <h3 class="text-2xl font-bold mb-2">One Day Trip</h3>
-            <p class="duration text-lg text-slate-600">Duration: ~1 day</p>
             <p class="desc text-lg text-slate-600">Perfect single-day loop to the most loved highlights:</p>
-            <ul class="includes list-disc pl-5 m-0 text-lg text-slate-700">
-              <li class="mb-1">Kelor Island</li>
-              <li class="mb-1">Kanawa Island (snorkeling)</li>
-              <li>Hidden sandy beaches</li>
+            <ul class="includes m-0 text-lg text-slate-700">
+              <li class="mb-1"><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Kelor Island</li>
+              <li class="mb-1"><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Kanawa Island (snorkeling)</li>
+              <li><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Hidden sandy beaches</li>
             </ul>
-            <div class="cta-row mt-4">
-              <p class="price text-tropical-800 font-semibold text-lg">From $45 per person</p>
-            </div>
           </div>
         </article>
         <!-- Full-day (no image) -->
         <article class="card reveal bg-white rounded-xl border border-gray-100 shadow-sm">
+          <div class="card-media">
+            <img src="komodo_national_park.png" alt="Komodo National Park" />
+            <div class="price-badge">From $85</div>
+          </div>
           <div class="card-body p-5">
             <h3 class="text-2xl font-bold mb-2">3 Day</h3>
-            <p class="duration text-lg text-slate-600">Duration: ~3 days</p>
             <p class="desc text-lg text-slate-600">Balanced itinerary covering the icons of Komodo:</p>
-            <ul class="includes list-disc pl-5 m-0 text-lg text-slate-700">
-              <li class="mb-1">Padar Viewpoint</li>
-              <li class="mb-1">Pink Beach (Komodo)</li>
-              <li>Manta Point & Rinca Island (dragons)</li>
+            <ul class="includes m-0 text-lg text-slate-700">
+              <li class="mb-1"><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Padar Viewpoint</li>
+              <li class="mb-1"><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Pink Beach (Komodo)</li>
+              <li><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Manta Point & Rinca Island (dragons)</li>
             </ul>
-            <div class="cta-row mt-4">
-              <p class="price text-tropical-800 font-semibold text-lg">From $85 per person</p>
-            </div>
           </div>
         </article>
         <!-- Sunset Cruise (no image) -->
         <article class="card reveal bg-white rounded-xl border border-gray-100 shadow-sm">
+          <div class="card-media">
+            <img src="pink_beach.png" alt="Pink Beach" />
+            <div class="price-badge">From $35</div>
+          </div>
           <div class="card-body p-5">
             <h3 class="text-2xl font-bold mb-2">5 Days</h3>
-            <p class="duration text-lg text-slate-600">Duration: ~5 days</p>
             <p class="desc text-lg text-slate-600">Extended adventure reaching remote bays and quiet islands:</p>
-            <ul class="includes list-disc pl-5 m-0 text-lg text-slate-700">
-              <li class="mb-1">Remote islands and viewpoints</li>
-              <li class="mb-1">Pristine snorkeling reefs</li>
-              <li>Sunset anchorages and stargazing</li>
+            <ul class="includes m-0 text-lg text-slate-700">
+              <li class="mb-1"><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Remote islands and viewpoints</li>
+              <li class="mb-1"><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Pristine snorkeling reefs</li>
+              <li><svg class="loc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Sunset anchorages and stargazing</li>
             </ul>
-            <div class="cta-row mt-4">
-              <p class="price text-tropical-800 font-semibold text-lg">From $35 per person</p>
-            </div>
           </div>
         </article>
       </div>
@@ -145,12 +145,30 @@
     <div class="container">
       <h2 class="section-title reveal">Gallery</h2>
       <div class="gallery-grid">
-        <img class="reveal" src="manta_point.png" alt="Manta Point" />
-        <img class="reveal" src="komodo_national_park.png" alt="Komodo National Park islands" />
-        <img class="reveal" src="turtle.png" alt="Sea turtle swimming" />
-        <img class="reveal" src="komodo.png" alt="Komodo dragon" />
-        <img class="reveal" src="pink_beach.png" alt="Pink Beach, Komodo" />
-        <img class="reveal" src="raja_ampat.png" alt="Raja Ampat islands" />
+        <figure class="gallery-item reveal">
+          <img src="manta_point.png" alt="Manta Point" />
+          <figcaption class="caption">Manta Point</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="komodo_national_park.png" alt="Komodo National Park" />
+          <figcaption class="caption">Komodo National Park</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="turtle.png" alt="Sea Turtle" />
+          <figcaption class="caption">Sea Turtle</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="komodo.png" alt="Komodo" />
+          <figcaption class="caption">Komodo Island</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="pink_beach.png" alt="Pink Beach" />
+          <figcaption class="caption">Pink Beach</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="raja_ampat.png" alt="Raja Ampat" />
+          <figcaption class="caption">Raja Ampat</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -183,9 +201,9 @@
         <h2 class="section-title">Contact</h2>
         <p>Send me a WhatsApp message or an email and I'll reply as soon as I can.</p>
         <div class="contact-actions">
-          <a class="btn whatsapp" id="contactWhatsApp" href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+          <a class="btn whatsapp" id="contactWhatsApp" href="https://wa.me/62895352383302" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width:18px;height:18px;filter:invert(1);margin-right:8px;vertical-align:middle;" />
-            +62 812 3456 7890
+            +62 895-3523-83302
           </a>
           <a class="btn outline" href="mailto:armansaputraundang@gmail.com">armansaputraundang@gmail.com</a>
         </div>

@@ -4,7 +4,7 @@ const WHATSAPP_NUMBER = '62895352383302'; // Use international format without '+
 
 // Helper to build WhatsApp link with a prefilled message
 function buildWhatsAppLink(source = 'website') {
-  const message = `Hello! I'm interested in your boat tours around ${CITY_NAME}.\n\nCould you please share availability and prices for:\n- Half-day\n- Full-day\n- Sunset Cruise\n\nThank you! (via ${source})`;
+  const message = `Hello! I'm interested in your boat tours around ${CITY_NAME}.\n\nCould you please share availability for:\n- Two Day Trip\n- Three Days Trip\n- Four Days Trip\n\nThank you! (via ${source})`;
   const encoded = encodeURIComponent(message);
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
 }

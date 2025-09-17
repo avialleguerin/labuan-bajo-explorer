@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Tailwind CDN (no build) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script>
     tailwind.config = {
       theme: {
@@ -46,9 +47,7 @@
   <header class="site-header sticky top-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
     <div class="container nav-wrapper">
       <a href="#home" class="logo" aria-label="Island Boat Tours">
-        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9S3 16.97 3 12zm9-6.2c-1.54 0-2.8 1.26-2.8 2.8 0 1.54 1.26 2.8 2.8 2.8s2.8-1.26 2.8-2.8c0-1.54-1.26-2.8-2.8-2.8zM7.2 17.6a7.95 7.95 0 009.6 0 .75.75 0 10-.9-1.2 6.5 6.5 0 01-7.8 0 .75.75 0 10-.9 1.2z"/>
-        </svg>
+        <img src="logo.png" alt="Island Boat Tours" />
         Island Boat Tours
       </a>
       <nav class="main-nav hidden md:flex gap-6 text-slate-700" id="mainNav">
@@ -231,7 +230,10 @@
               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="width:18px;height:18px;filter:invert(1);margin-right:8px;vertical-align:middle;" />
               Chat on WhatsApp
             </a>
-            <a class="btn outline" href="mailto:armansaputraundang@gmail.com" aria-label="Request a quote via email">Send a mail</a>
+            <a class="btn outline inline-flex items-center gap-2" href="mailto:armansaputraundang@gmail.com" aria-label="Request a quote via email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5L4 6h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+              Send a mail
+            </a>
         </div>
       </div>
       <div class="map-wrapper reveal" id="mapWrapper">

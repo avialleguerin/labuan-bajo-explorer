@@ -10,6 +10,61 @@
   --shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
+/* --- Trip Detail (AYANA-inspired) --- */
+.hero-mini { position: relative; min-height: 48vh; display: grid; place-items: center; text-align: center; color: #fff; overflow: hidden; }
+.hero-mini .bg { position:absolute; inset:0; background-size: cover; background-position: center; }
+.hero-mini .inner .tagline { font-size: clamp(26px, 4.6vw, 40px); }
+.breadcrumb { color: #eaf6ff; opacity: .9; font-size: 14px; margin-bottom: 8px; }
+
+.detail-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: start; }
+@media (max-width: 980px){ .detail-wrap { grid-template-columns: 1fr; } }
+
+/* Place the optional 'Other trips' block under the right-hand aside */
+.detail-wrap .other-trips-aside { grid-column: 2; margin-top: 14px; }
+@media (max-width: 980px){ .detail-wrap .other-trips-aside { grid-column: 1; } }
+
+/* Right column wrapper to keep elements stacked together */
+.detail-wrap .right-col { grid-column: 2; display: flex; flex-direction: column; gap: 14px; }
+@media (max-width: 980px){ .detail-wrap .right-col { grid-column: 1; } }
+
+.info-card { background: #fff; border: 1px solid rgba(10,61,96,0.06); border-radius: 14px; box-shadow: var(--shadow); padding: 18px; }
+.info-card h3 { margin-top: 0; color: var(--navy); }
+.sticky-aside { position: static; top: auto; }
+
+.section.alt { background: #f8fafc; }
+.section-title { display: block; margin-bottom: 14px; }
+
+/* Subsection headings, smaller than section-title but larger than body */
+.subsection-title {
+  margin: 12px 0 8px;
+  font-size: clamp(18px, 2.4vw, 22px);
+  line-height: 1.25;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.pillbar { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.pill { background: #ffffff; border: 1px solid rgba(11,61,96,.08); color: var(--navy); padding: 6px 12px; border-radius: 999px; font-weight: 600; font-size: 13px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
+
+.gallery-grid.detail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 980px){ .gallery-grid.detail { grid-template-columns: repeat(2, 1fr); } }
+.gallery-grid.detail .gallery-item img { border-radius: 12px; box-shadow: var(--shadow); }
+
+.includes { list-style: disc; padding-left: 1.25rem; list-style-position: outside; }
+.includes.list-disc { list-style: disc; padding-left: 1.25rem; list-style-position: outside; }
+
+.cta-wrap { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Circular right-arrow button for pricing cards */
+.cta-right { display: flex; justify-content: flex-end; }
+.btn-circle { width: 40px; height: 40px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; background: var(--navy); color: #fff; box-shadow: var(--shadow); transition: transform .15s ease, background .2s ease; }
+.btn-circle:hover { background: #083b5e; transform: translateY(-1px); }
+.btn-circle svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* Card footer row: price left, arrow right */
+.card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+.price-inline { font-weight: 700; color: var(--navy); }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -101,7 +156,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* Cards (Tours) */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .card {
   background: #fff;
   border-radius: 14px;
@@ -112,8 +167,8 @@ img { max-width: 100%; display: block; }
   border: 1px solid rgba(10,61,96,0.06);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.card-img { background-size: cover; background-position: center; height: 180px; }
-.card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+.card-img { background-size: cover; background-position: center; height: 150px; }
+.card-body { padding: 14px; display: flex; flex-direction: column; gap: 6px; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,0.18); border-color: rgba(10,61,96,0.12); }
 .card h3 { margin: 0 0 6px; }
 .duration { color: var(--muted); margin: 0 0 6px; font-size: 14px; }
@@ -133,25 +188,21 @@ img { max-width: 100%; display: block; }
 .chip { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: #f6f8fa; color: #41525d; border: 1px solid #e3e7ea; }
 
 /* Pricing / Card media */
-.card-media { position: relative; height: 180px; overflow: hidden; }
+.card-media { position: relative; height: 120px; overflow: hidden; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s cubic-bezier(.2,.9,.2,1); }
 .card:hover .card-media img { transform: scale(1.06); }
 .price-badge {
   position: absolute;
   right: 12px;
-  bottom: 12px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
-  color: var(--navy);
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-weight: 800;
-  box-shadow: 0 6px 18px rgba(10,61,96,0.12);
-  border: 1px solid rgba(11,61,96,0.06);
-  font-size: 14px;
+  top: 12px;
+  background: rgba(11,61,96,0.92);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 11px;
+  box-shadow: var(--shadow);
 }
-
-/* Make card body spacing slightly tighter for a modern compact card */
-.card-body { padding: 16px; }
 
 /* Location list styling */
 .includes { list-style: none; padding: 0; margin: 8px 0 0 0; display: grid; gap: 8px; }
@@ -306,4 +357,38 @@ img { max-width: 100%; display: block; }
   .nav-wrapper { flex-wrap: wrap; gap: 8px; }
   .main-nav { width: 100%; display: flex; justify-content: space-between; }
   .team-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Overrides to ensure bullets appear on lists used in trip pages --- */
+.section .includes {
+  list-style: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.25rem !important;
+}
+.section .includes.itinerary-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+.section .itinerary-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 10px 0 18px;
+}
+.section .includes li { display: list-item; }
+
+/* Spacing between itinerary days */
+.section h3 + .itinerary-list { margin-top: 8px; margin-bottom: 18px; }
+.section .itinerary-list + h3 { margin-top: 18px; }
+
+/* Align itinerary icons to the left of the text */
+.section .itinerary-list li {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+.section .itinerary-list .loc-icon,
+.section .itinerary-list svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
 }

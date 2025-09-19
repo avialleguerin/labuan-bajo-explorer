@@ -132,7 +132,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(11,61,96,0.5), rgba(11,61,96,0.35)), url('images/boat.jpg');
+  background-image: linear-gradient(rgba(11,61,96,0.5), rgba(11,61,96,0.35)), url('images/boat.png');
   background-size: cover; background-position: center; background-repeat: no-repeat;
   transform: scale(1.05);
 }

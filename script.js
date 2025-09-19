@@ -1,15 +1,12 @@
-// Configuration
-const CITY_NAME = 'Labuan Bajo'; // Change to your city, e.g., 'Labuan Bajo', 'Nusa Penida', etc.
-const WHATSAPP_NUMBER = '62895352383302'; // Use international format without '+' e.g., 628xxxxxxx
+const CITY_NAME = 'Labuan Bajo';
+const WHATSAPP_NUMBER = '62895352383302';
 
-// Helper to build WhatsApp link with a prefilled message
-function buildWhatsAppLink(source = 'website') {
-  const message = `Hello! I'm interested in your boat tours around ${CITY_NAME}.\n\nCould you please share availability for:\n- Two Days Trip\n- Three Days Trip\n- Four Days Trip\n\nThank you! (via ${source})`;
+function buildWhatsAppLink() {
+  const message = `Hello! I'm interested in your boat tours around ${CITY_NAME}.\n\nCould you please share availability for:\n- Two Days Trip\n- Three Days Trip\n- Four Days Trip\n\nThank you!`;
   const encoded = encodeURIComponent(message);
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
 }
 
-// Smooth scroll to section accounting for sticky header height
 function smoothScrollTo(hash) {
   const target = document.querySelector(hash);
   if (!target) return;
@@ -19,7 +16,6 @@ function smoothScrollTo(hash) {
   window.scrollTo({ top, behavior: 'smooth' });
 }
 
-// Intersection Observer for reveal-on-scroll
 function setupReveals() {
   const items = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
@@ -37,7 +33,6 @@ function setupReveals() {
   items.forEach(el => observer.observe(el));
 }
 
-// Update header on scroll (optional shadow)
 function setupHeaderScroll() {
   const header = document.querySelector('.site-header');
   const onScroll = () => {
@@ -48,7 +43,6 @@ function setupHeaderScroll() {
   onScroll();
 }
 
-// Initialize WhatsApp links and city text replacements
 function setupWhatsApp() {
   const links = [
     { id: 'heroWhatsApp', src: 'Hero button' },
@@ -65,7 +59,6 @@ function setupWhatsApp() {
   });
 }
 
-// Replace [City] placeholders in text
 function replaceCityPlaceholders() {
   const placeholder = /\[City\]/g;
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);

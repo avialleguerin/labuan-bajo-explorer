@@ -259,8 +259,27 @@ img { max-width: 100%; display: block; }
   border-radius: 12px;
   padding: 16px 18px;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 180px;
 }
-.review footer { color: var(--muted); margin-top: 8px; }
+.review p {
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.review footer {
+  color: var(--muted);
+  text-align: right;
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  margin: 0;
+}
 
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; align-items: stretch; }

@@ -1,6 +1,6 @@
 # Labuan Bajo Explorer
 
-Site web vitrine pour des excursions touristiques à Labuan Bajo, en Indonésie. Ce site met en valeur les différentes excursions proposées par un guide local, avec des options de visites d'une journée à plusieurs jours dans les îles paradisiaques des environs.
+Site web vitrine pour des excursions touristiques à Labuan Bajo, en Indonésie. Ce site met en valeur les différentes excursions proposées par un guide local, avec des options de visites d'une journée à plusieurs jours dans les îles paradisiaques des environs. Le site est en ligne sur https://labuan-bajo-explorer.alwaysdata.net/
 
 ## 🌴 Fonctionnalités
 

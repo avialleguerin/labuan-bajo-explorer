@@ -216,9 +216,11 @@
   align-items: baseline;
   gap: 8px;
 }
+/* Decorative price icon - for visual enhancement only */
 .price::before {
   content: '💰';
   font-size: 28px;
+  aria-hidden: true;
 }
 .price strong {
   background: linear-gradient(135deg, var(--tropical-teal), var(--tropical-blue));
@@ -236,9 +238,11 @@
   gap: 8px;
   margin: 8px 0;
 }
+/* Decorative capacity icon - for visual enhancement only */
 .capacity::before {
   content: '👥';
   font-size: 18px;
+  aria-hidden: true;
 }
 
 /* Circular right-arrow button for pricing cards - Enhanced */
@@ -297,10 +301,12 @@
   align-items: baseline;
   gap: 4px;
 }
+/* Decorative price icon - for visual enhancement only */
 .price-inline::before {
   content: '💰';
   font-size: 18px;
   margin-right: 4px;
+  aria-hidden: true;
 }
 
 * { box-sizing: border-box; }
@@ -537,9 +543,11 @@ img {
   align-items: center;
   gap: 6px;
 }
+/* Decorative capacity icon - for visual enhancement only */
 .capacity::before {
   content: '👥';
   font-size: 16px;
+  aria-hidden: true;
 }
 .duration { 
   color: var(--muted); 

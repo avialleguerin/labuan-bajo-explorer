@@ -217,10 +217,10 @@
   gap: 8px;
 }
 /* Decorative price icon - for visual enhancement only */
+/* Note: CSS content emojis are decorative; actual semantic meaning comes from text */
 .price::before {
   content: '💰';
   font-size: 28px;
-  aria-hidden: true;
 }
 .price strong {
   background: linear-gradient(135deg, var(--tropical-teal), var(--tropical-blue));
@@ -239,10 +239,10 @@
   margin: 8px 0;
 }
 /* Decorative capacity icon - for visual enhancement only */
+/* Note: CSS content emojis are decorative; actual semantic meaning comes from text */
 .capacity::before {
   content: '👥';
   font-size: 18px;
-  aria-hidden: true;
 }
 
 /* Circular right-arrow button for pricing cards - Enhanced */
@@ -302,11 +302,11 @@
   gap: 4px;
 }
 /* Decorative price icon - for visual enhancement only */
+/* Note: CSS content emojis are decorative; actual semantic meaning comes from text */
 .price-inline::before {
   content: '💰';
   font-size: 18px;
   margin-right: 4px;
-  aria-hidden: true;
 }
 
 * { box-sizing: border-box; }
@@ -544,10 +544,10 @@ img {
   gap: 6px;
 }
 /* Decorative capacity icon - for visual enhancement only */
+/* Note: CSS content emojis are decorative; actual semantic meaning comes from text */
 .capacity::before {
   content: '👥';
   font-size: 16px;
-  aria-hidden: true;
 }
 .duration { 
   color: var(--muted); 
@@ -1085,6 +1085,7 @@ img {
 }
 
 /* --- Overrides to ensure bullets appear on lists used in trip pages --- */
+/* Note: !important is used here to ensure proper list styling overrides Tailwind classes */
 .section .includes {
   list-style: disc !important;
   list-style-position: outside !important;
@@ -1095,8 +1096,8 @@ img {
   padding-left: 0 !important;
 }
 .section .itinerary-list {
-  list-style: none !important;
-  padding-left: 0 !important;
+  list-style: none !important;  /* Override Tailwind defaults */
+  padding-left: 0 !important;   /* Override Tailwind defaults */
   margin: 12px 0 24px;
 }
 .section .includes li { 
@@ -1118,7 +1119,7 @@ img {
 
 /* Align itinerary icons to the left of the text */
 .section .itinerary-list li {
-  display: flex !important;
+  display: flex !important;  /* Override default list-item display */
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
